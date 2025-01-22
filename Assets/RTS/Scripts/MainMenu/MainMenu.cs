@@ -1,43 +1,68 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    private float musicVolume = 1f;
-    private AudioSource AudioSource;
+    [SerializeField]
+    private Slider volumeSlider;
+
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     private void Start()
     {
-        AudioSource = GetComponent<AudioSource>();
+        // Получаем компонент AudioSource
+        audioSource = GetComponent<AudioSource>();
 
-        
+        // Инициализируем слайдер громкости из SettingsManager
+        if (SettingsManager.Instance != null)
+        {
+            volumeSlider.value = SettingsManager.Instance.musicVolume;
+            UpdateVolume();
+        }
+
+        // Добавляем обработчик событий для слайдера
+        volumeSlider.onValueChanged.AddListener(OnVolumeSliderChanged);
     }
+
+    // Update is called once per frame
     private void Update()
     {
-        AudioSource.volume = musicVolume;
+        // Обновляем громкость аудио-источника в реальном времени
+        if (SettingsManager.Instance != null)
+        {
+            audioSource.volume = SettingsManager.Instance.musicVolume;
+        }
     }
 
+    // Метод для обновления громкости
+    public void UpdateVolume()
+    {
+        if (SettingsManager.Instance != null)
+        {
+            SettingsManager.Instance.SetVolume(volumeSlider.value);
+        }
+    }
+
+    // Обработчик событий для слайдера
+    private void OnVolumeSliderChanged(float value)
+    {
+        UpdateVolume();
+    }
+
+    // Метод для начала игры
     public void PlayGame()
     {
         SceneManager.LoadScene("Game");
+    }
 
-    }
-    public void SetVolume(float volume)
-    {
-        musicVolume = volume;
-    }
-    
-    // Update is called once per frame
+    // Метод для выхода из игры
     public void ExitGame()
     {
         Debug.Log("GameClosed");
-        Application.Quit();        
+        Application.Quit();
     }
-    
-
 }
