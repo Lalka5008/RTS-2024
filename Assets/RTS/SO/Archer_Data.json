@@ -1,0 +1,21 @@
+{
+    "Name": "Archer",
+    "Speed": 20.0,
+    "Vision": 15.0,
+    "Health": 70,
+    "PriceFood": 5,
+    "PriceWood": 2,
+    "PriceIron": 0,
+    "PriceStone": 0,
+    "specialStats": [
+        {
+            "MinDistAttack": 0.0,
+            "MaxDistAttack": 10.0,
+            "MinAttackSpeed": 2.0,
+            "Damage": 10,
+            "MaxUnitsIn": 0
+        }
+    ],
+    "specialStatsBuilders": [],
+    "specialStatsHealers": []
+}

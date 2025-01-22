@@ -1,0 +1,10 @@
+{
+    "Name": "Archer",
+    "Speed": 4.0,
+    "Vision": 10.0,
+    "Health": 70,
+    "PriceFood": 5,
+    "PriceWood": 3,
+    "PriceIron": 0,
+    "PriceStone": 0
+}

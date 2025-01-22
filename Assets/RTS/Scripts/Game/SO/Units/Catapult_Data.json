@@ -1,0 +1,10 @@
+{
+    "Name": "Catapult",
+    "Speed": 2.0,
+    "Vision": 12.0,
+    "Health": 200,
+    "PriceFood": 10,
+    "PriceWood": 8,
+    "PriceIron": 4,
+    "PriceStone": 5
+}
