@@ -1,17 +1,23 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+
 public class ResolutionChanger : MonoBehaviour
 {
-    public TMP_Dropdown resolutionDropdown; 
+    public TMP_Dropdown resolutionDropdown;
 
     void Start()
     {
         resolutionDropdown.onValueChanged.AddListener(ChangeResolution);
+        if (SettingsManager.Instance != null)
+        {
+            resolutionDropdown.value = SettingsManager.Instance.resolutionIndex;
+            ChangeResolution(resolutionDropdown.value);
+        }
     }
 
     void ChangeResolution(int index)
-    { 
+    {
         switch (index)
         {
             case 0: // 1920x1080
@@ -22,10 +28,14 @@ public class ResolutionChanger : MonoBehaviour
                 break;
             case 2: // 1336x768
                 Screen.SetResolution(1336, 768, Screen.fullScreen);
-                break ;
+                break;
             case 3: // 1280x720
                 Screen.SetResolution(1280, 720, Screen.fullScreen);
                 break;
+        }
+        if (SettingsManager.Instance != null)
+        {
+            SettingsManager.Instance.SetResolution(index);
         }
     }
 }

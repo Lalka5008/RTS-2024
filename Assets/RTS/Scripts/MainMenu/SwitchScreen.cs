@@ -31,7 +31,11 @@ public class SwitchScreen : MonoBehaviour
     public void FullscreenToggle()
     {
         isFullScreen = !isFullScreen;
-        Screen.fullScreen = !isFullScreen;
+        Screen.fullScreen = isFullScreen;
+        if (SettingsManager.Instance != null)
+        {
+            SettingsManager.Instance.SetFullScreen(isFullScreen);
+        }
     }
 
     private void Status()

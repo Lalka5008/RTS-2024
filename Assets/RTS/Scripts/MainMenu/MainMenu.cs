@@ -17,11 +17,21 @@ public class MainMenu : MonoBehaviour
         // Получаем компонент AudioSource
         audioSource = GetComponent<AudioSource>();
 
+        if (audioSource == null)
+        {
+            Debug.LogError("AudioSource component is missing from the GameObject.");
+            return;
+        }
+
         // Инициализируем слайдер громкости из SettingsManager
         if (SettingsManager.Instance != null)
         {
             volumeSlider.value = SettingsManager.Instance.musicVolume;
             UpdateVolume();
+        }
+        else
+        {
+            Debug.LogError("SettingsManager instance is missing.");
         }
 
         // Добавляем обработчик событий для слайдера
