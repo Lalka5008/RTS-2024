@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 33986754}
   m_Layer: 5
   m_Name: BuildCrops
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -520,7 +520,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 0.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -646,6 +646,7 @@ GameObject:
   - component: {fileID: 72885085}
   - component: {fileID: 72885090}
   - component: {fileID: 72885091}
+  - component: {fileID: 72885093}
   m_Layer: 0
   m_Name: InputManager
   m_TagString: Untagged
@@ -701,6 +702,18 @@ MonoBehaviour:
   smallUnitsGrid: {fileID: 1594842078}
   smallUnitPrefab: {fileID: 4999676232382946815, guid: 472d1b3c89b05e94cb484a1b6752d646, type: 3}
   gridParent: {fileID: 1594842079}
+--- !u!114 &72885093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72885083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1dcc715d76dac47856b60ed5abe0ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &74672016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -839,7 +852,7 @@ Camera:
   near clip plane: 0.01
   far clip plane: 100
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 10.26
   m_Depth: -1
   m_CullingMask:
@@ -965,6 +978,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 582747041}
   m_SourcePrefab: {fileID: 100100000, guid: 9a7d3b51deaf30a4ab3f08dddbe5e949, type: 3}
+--- !u!1 &86825931 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7288969189888701745, guid: b4a455cce70ce2341a96c0c047214913, type: 3}
+  m_PrefabInstance: {fileID: 1948313879}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &97321067
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,7 +998,7 @@ GameObject:
   - component: {fileID: 97321069}
   m_Layer: 5
   m_Name: Button (15)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1233,7 +1251,7 @@ GameObject:
   - component: {fileID: 154962744}
   m_Layer: 5
   m_Name: BuildArmory
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1745,7 +1763,7 @@ GameObject:
   - component: {fileID: 200857990}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2089,7 +2107,7 @@ GameObject:
   - component: {fileID: 255932473}
   m_Layer: 5
   m_Name: Button (8)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2256,7 +2274,7 @@ GameObject:
   - component: {fileID: 279614203}
   m_Layer: 5
   m_Name: BuildChurch
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2695,7 +2713,7 @@ GameObject:
   - component: {fileID: 371132000}
   m_Layer: 5
   m_Name: ButtonCursor
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2861,7 +2879,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 0.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -3342,7 +3360,7 @@ GameObject:
   - component: {fileID: 540842169}
   m_Layer: 5
   m_Name: BuildWindmill
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3942,7 +3960,7 @@ GameObject:
   - component: {fileID: 626484237}
   m_Layer: 5
   m_Name: BuildHouse
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4094,6 +4112,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 626484235}
   m_CullTransparentMesh: 1
+--- !u!1 &627399987 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2419335754712007016, guid: 0b2d2aac06ba98b4c8a9886ded45a7cb, type: 3}
+  m_PrefabInstance: {fileID: 6899613239788996833}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &627399990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627399987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946239973142c374db0372daeb99bcd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceName: 
+  maxDurability: 0
+  currentDurability: 0
 --- !u!1 &647313200
 GameObject:
   m_ObjectHideFlags: 0
@@ -4109,7 +4147,7 @@ GameObject:
   - component: {fileID: 647313202}
   m_Layer: 5
   m_Name: ButtonBuild
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4777,7 +4815,7 @@ GameObject:
   - component: {fileID: 735657759}
   m_Layer: 5
   m_Name: Button (9)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5179,7 +5217,7 @@ GameObject:
   - component: {fileID: 825384561}
   m_Layer: 5
   m_Name: Button (14)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5346,7 +5384,7 @@ GameObject:
   - component: {fileID: 828336634}
   m_Layer: 5
   m_Name: ButtonCollect
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6455,12 +6493,28 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2899173818226819402, guid: b4a455cce70ce2341a96c0c047214913, type: 3}
   m_PrefabInstance: {fileID: 1948313879}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 86825931}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 49f17f26fce367b4ab80e08e45025ec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1031070541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86825931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c86daa55da077d74aa41bea259bc804d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  woodCount: 1
+  stoneCount: 2
+  woodText: {fileID: 2090774655}
+  stoneText: {fileID: 1826975371}
 --- !u!1 &1035772097
 GameObject:
   m_ObjectHideFlags: 0
@@ -6628,7 +6682,7 @@ GameObject:
   - component: {fileID: 1060459448}
   m_Layer: 5
   m_Name: BuildWarriory
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7141,7 +7195,7 @@ GameObject:
   - component: {fileID: 1161941379}
   m_Layer: 5
   m_Name: BuildArcherTower
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9564,7 +9618,7 @@ GameObject:
   - component: {fileID: 1511155986}
   m_Layer: 5
   m_Name: Button (10)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9731,7 +9785,7 @@ GameObject:
   - component: {fileID: 1526943581}
   m_Layer: 5
   m_Name: BuildHut
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10045,7 +10099,7 @@ GameObject:
   - component: {fileID: 1568865655}
   m_Layer: 5
   m_Name: Button (17)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10493,7 +10547,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 0.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -10966,7 +11020,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 0.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -11521,9 +11575,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2812183827250803736, guid: 2712e8446c71581439f99e159579d13b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.71
+      objectReference: {fileID: 0}
     - target: {fileID: 3934035896433079927, guid: 2712e8446c71581439f99e159579d13b, type: 3}
       propertyPath: m_Name
       value: Storage Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915821100894921368, guid: 2712e8446c71581439f99e159579d13b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915821100894921368, guid: 2712e8446c71581439f99e159579d13b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.17
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12512,7 +12578,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 0.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -12860,7 +12926,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7288969189888701745, guid: b4a455cce70ce2341a96c0c047214913, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1031070541}
   m_SourcePrefab: {fileID: 100100000, guid: b4a455cce70ce2341a96c0c047214913, type: 3}
 --- !u!1 &1952918770
 GameObject:
@@ -12963,7 +13032,7 @@ GameObject:
   - component: {fileID: 1962343901}
   m_Layer: 5
   m_Name: Button (7)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13115,6 +13184,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1962343899}
   m_CullTransparentMesh: 1
+--- !u!1 &1971255578 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8255816282181231689, guid: ba9b2cf6787bd16498af9e72e0441542, type: 3}
+  m_PrefabInstance: {fileID: 4338814339981384828}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2021995251
 GameObject:
   m_ObjectHideFlags: 0
@@ -13609,6 +13683,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8255816282181204073, guid: ba9b2cf6787bd16498af9e72e0441542, type: 3}
   m_PrefabInstance: {fileID: 4338814339981384828}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2140945135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971255578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e25b851cdafdea6429249c13cc2aae01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceName: 
+  maxDurability: 0
+  currentDurability: 0
 --- !u!195 &2141869068
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13623,7 +13712,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 0.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -13720,6 +13809,7 @@ GameObject:
   - component: {fileID: 2141869069}
   - component: {fileID: 2141869068}
   - component: {fileID: 5325431171036607320}
+  - component: {fileID: 5325431171036607321}
   m_Layer: 0
   m_Name: Heavy Warrior
   m_TagString: Unit
@@ -13758,6 +13848,7 @@ GameObject:
   - component: {fileID: 7755310089277482876}
   - component: {fileID: 1904283949}
   - component: {fileID: 1904283948}
+  - component: {fileID: 7755310089277482877}
   m_Layer: 0
   m_Name: Archer
   m_TagString: Unit
@@ -13804,6 +13895,7 @@ GameObject:
   - component: {fileID: 1615312934}
   - component: {fileID: 1615312933}
   - component: {fileID: 9033564630386340734}
+  - component: {fileID: 9033564630386340735}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Unit
@@ -14027,7 +14119,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8255816282181204073, guid: ba9b2cf6787bd16498af9e72e0441542, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.033846
+      value: 6.24
       objectReference: {fileID: 0}
     - target: {fileID: 8255816282181204073, guid: ba9b2cf6787bd16498af9e72e0441542, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14035,7 +14127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8255816282181204073, guid: ba9b2cf6787bd16498af9e72e0441542, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.1547432
+      value: 1.62
       objectReference: {fileID: 0}
     - target: {fileID: 8255816282181204073, guid: ba9b2cf6787bd16498af9e72e0441542, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14072,7 +14164,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8255816282181231689, guid: ba9b2cf6787bd16498af9e72e0441542, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2140945135}
   m_SourcePrefab: {fileID: 100100000, guid: ba9b2cf6787bd16498af9e72e0441542, type: 3}
 --- !u!33 &4358199232818719456
 MeshFilter:
@@ -14096,7 +14191,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 0.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -14139,6 +14234,7 @@ GameObject:
   - component: {fileID: 1674347963}
   - component: {fileID: 1674347962}
   - component: {fileID: 7136307975415603159}
+  - component: {fileID: 7136307975415603160}
   m_Layer: 0
   m_Name: Archer Tower
   m_TagString: Unit
@@ -14170,7 +14266,18 @@ MonoBehaviour:
   unitIcon: {fileID: 21300000, guid: 8155e2639cd449540ac862478791c54e, type: 3}
   currentHealth: 150
   maxHealth: 150
-  controller: {fileID: 0}
+--- !u!114 &5325431171036607321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408817029215960866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1dcc715d76dac47856b60ed5abe0ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5381656725590451363
 GameObject:
   m_ObjectHideFlags: 0
@@ -14180,9 +14287,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5724635998042519042}
+  - component: {fileID: 5724635998042519043}
   - component: {fileID: 65721935}
   - component: {fileID: 65721934}
-  - component: {fileID: 5724635998042519043}
+  - component: {fileID: 5724635998042519044}
   m_Layer: 0
   m_Name: Catapult
   m_TagString: Unit
@@ -14257,7 +14365,18 @@ MonoBehaviour:
   unitIcon: {fileID: 21300000, guid: 2e0c6035e4870b84d804a645cb3fe48f, type: 3}
   currentHealth: 175
   maxHealth: 175
-  controller: {fileID: 0}
+--- !u!114 &5724635998042519044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5381656725590451363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1dcc715d76dac47856b60ed5abe0ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6899613239788996833
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14284,7 +14403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4867685598021760944, guid: 0b2d2aac06ba98b4c8a9886ded45a7cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.1461525
+      value: 3.52
       objectReference: {fileID: 0}
     - target: {fileID: 4867685598021760944, guid: 0b2d2aac06ba98b4c8a9886ded45a7cb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14292,7 +14411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4867685598021760944, guid: 0b2d2aac06ba98b4c8a9886ded45a7cb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.4152565
+      value: 1.74
       objectReference: {fileID: 0}
     - target: {fileID: 4867685598021760944, guid: 0b2d2aac06ba98b4c8a9886ded45a7cb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14341,7 +14460,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2419335754712007016, guid: 0b2d2aac06ba98b4c8a9886ded45a7cb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 627399990}
   m_SourcePrefab: {fileID: 100100000, guid: 0b2d2aac06ba98b4c8a9886ded45a7cb, type: 3}
 --- !u!4 &7136307975415603158
 Transform:
@@ -14376,7 +14498,18 @@ MonoBehaviour:
   unitIcon: {fileID: 21300000, guid: 46001833cc5d1254296592bbd19b939b, type: 3}
   currentHealth: 200
   maxHealth: 200
-  controller: {fileID: 0}
+--- !u!114 &7136307975415603160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5056541987632305513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1dcc715d76dac47856b60ed5abe0ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7255528329869077199
 GameObject:
   m_ObjectHideFlags: 0
@@ -14391,6 +14524,7 @@ GameObject:
   - component: {fileID: 384024090}
   - component: {fileID: 384024089}
   - component: {fileID: 7255528329869077200}
+  - component: {fileID: 7255528329869077201}
   m_Layer: 0
   m_Name: Priest
   m_TagString: Unit
@@ -14414,7 +14548,18 @@ MonoBehaviour:
   unitIcon: {fileID: 21300000, guid: 3bf9bc81e50045241944ad84906fbf8e, type: 3}
   currentHealth: 75
   maxHealth: 75
-  controller: {fileID: 0}
+--- !u!114 &7255528329869077201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7255528329869077199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1dcc715d76dac47856b60ed5abe0ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &7755310089277482875
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14475,7 +14620,18 @@ MonoBehaviour:
   unitIcon: {fileID: 21300000, guid: 18b3e586b942b6548bb07ff2451b8535, type: 3}
   currentHealth: 70
   maxHealth: 70
-  controller: {fileID: 72885090}
+--- !u!114 &7755310089277482877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861785189489597478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1dcc715d76dac47856b60ed5abe0ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8500933222214724735
 GameObject:
   m_ObjectHideFlags: 0
@@ -14487,9 +14643,11 @@ GameObject:
   - component: {fileID: 5536421618828682805}
   - component: {fileID: 276240185932363956}
   - component: {fileID: 2090008676628224275}
+  - component: {fileID: 8500933222214724737}
   - component: {fileID: 4832449202348594230}
   - component: {fileID: 4832449202348594231}
   - component: {fileID: 8500933222214724736}
+  - component: {fileID: 8500933222214724738}
   m_Layer: 0
   m_Name: Villager
   m_TagString: Unit
@@ -14513,7 +14671,32 @@ MonoBehaviour:
   unitIcon: {fileID: 21300000, guid: 2d9f93e1c80a5fa4aaaa6a3e0dfeb5d3, type: 3}
   currentHealth: 50
   maxHealth: 50
-  controller: {fileID: 0}
+--- !u!114 &8500933222214724737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8500933222214724735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1dcc715d76dac47856b60ed5abe0ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8500933222214724738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8500933222214724735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 087f4004b2493bd4fb341047157cef56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 4832449202348594230}
+  harvestRange: 5
 --- !u!33 &9033564630386340733
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14538,7 +14721,18 @@ MonoBehaviour:
   unitIcon: {fileID: 21300000, guid: f1b29190b0ae2bf4693f783debe79c85, type: 3}
   currentHealth: 100
   maxHealth: 100
-  controller: {fileID: 0}
+--- !u!114 &9033564630386340735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073963556739795897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1dcc715d76dac47856b60ed5abe0ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
