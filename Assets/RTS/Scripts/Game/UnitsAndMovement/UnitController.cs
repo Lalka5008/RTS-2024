@@ -11,6 +11,7 @@ public class UnitController : MonoBehaviour
     private NoSelectionZoneHandler noSelectionZoneHandler;
     private UnitUIHandler unitUIHandler;
 
+
     private bool isSelecting = false;
     private Vector2 mouseDownPosition;
     private float movementThreshold = 5f; // Порог движения мыши для определения одиночного клика
@@ -23,10 +24,12 @@ public class UnitController : MonoBehaviour
         movementHandler = gameObject.AddComponent<MovementHandler>();
         selectionBoxUIHandler = gameObject.AddComponent<SelectionBoxUIHandler>();
         noSelectionZoneHandler = gameObject.AddComponent<NoSelectionZoneHandler>();
-
         unitUIHandler = Object.FindFirstObjectByType<UnitUIHandler>();
 
+
+
         selectionBoxUIHandler.selectionBoxUI = selectionBoxUI;
+        
     }
 
     void Update()

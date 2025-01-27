@@ -1,7 +1,5 @@
-// MovementHandler.cs
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class MovementHandler : MonoBehaviour
 {
@@ -15,13 +13,13 @@ public class MovementHandler : MonoBehaviour
             {
                 foreach (GameObject unit in selectedUnits)
                 {
-                    NavMeshAgent agent = unit.GetComponent<NavMeshAgent>();
-                    if (agent != null)
+                    UnitStopper unitController = unit.GetComponent<UnitStopper>();
+                    if (unitController != null)
                     {
-                        agent.SetDestination(hit.point);
+                        unitController.MoveTo(hit.point);
                     }
                 }
             }
         }
     }
-}
+}   
