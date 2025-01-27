@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
+using System.Collections.Generic;
 
 public class UnitController : MonoBehaviour
 {
@@ -10,7 +12,6 @@ public class UnitController : MonoBehaviour
     private SelectionBoxUIHandler selectionBoxUIHandler;
     private NoSelectionZoneHandler noSelectionZoneHandler;
     private UnitUIHandler unitUIHandler;
-
 
     private bool isSelecting = false;
     private Vector2 mouseDownPosition;
@@ -26,18 +27,25 @@ public class UnitController : MonoBehaviour
         noSelectionZoneHandler = gameObject.AddComponent<NoSelectionZoneHandler>();
         unitUIHandler = Object.FindFirstObjectByType<UnitUIHandler>();
 
-
-
         selectionBoxUIHandler.selectionBoxUI = selectionBoxUI;
-        
     }
 
     void Update()
     {
+        // Проверяем, находится ли указатель над зоной без выделения
         if (noSelectionZoneHandler.IsPointerOverNoSelectionZone())
         {
-            isSelecting = false;
-            return;
+            // Если выделение уже началось, продолжаем его, игнорируя NoSelectionZone
+            if (!isSelecting)
+            {
+                // Если выделение не началось, не позволяем начать его
+                isSelecting = false;
+                if (selectionBoxUIHandler.selectionBoxUI.gameObject.activeInHierarchy)
+                {
+                    selectionBoxUIHandler.EndSelection();
+                }
+                return;
+            }
         }
 
         HandleSelection();
